@@ -1,0 +1,375 @@
+/* ===== GENERAL ===== */
+body {
+  font-family: "Fira Code", monospace;
+  background: #0d1117;
+  color: #e6edf3;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== COVER SECTION ===== */
+#cover {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#cover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* ===== TERMINAL CARD ===== */
+.terminal-card {
+  position: relative;
+  z-index: 1;
+  background: #161b22;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+  overflow: hidden;
+  margin: 60px auto;
+}
+
+/* ===== SLIMMER INTRO CARD (Cover section only) ===== */
+#intro.terminal-card {
+  max-width: 650px;   /* narrower intro */
+}
+
+/* ===== SLIMMER CONTACT SECTION (last card) ===== */
+.terminal-card:last-of-type {
+  max-width: 500px;   /* keep contact slim */
+}
+
+
+.terminal-header {
+  background: #0d1117;
+  padding: 8px;
+  display: flex;
+  gap: 6px;
+}
+.terminal-header span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.red { background: #a25cff; }
+.yellow { background: #ff77aa; }
+.green { background: #4da6ff; } /* changed green to pink */
+
+.terminal-body {
+  padding: 20px;
+  text-align: justify;
+}
+.command {
+  color: #ff77aa; /* pink for commands (was green) */
+  margin-bottom: 12px;
+}
+
+.terminal-body h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0.2rem 0;
+  color: #ffffff;
+}
+
+.subtitle {
+  color: #4da6ff;
+  margin-bottom: 20px;
+}
+
+/* ===== SKILLS ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills span {
+  background: rgba(143, 53, 101, 0.85);   /* slightly darker pink than #ff77aa */
+  border: 1px solid #ff77aa; /* command text pink for border */
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: #ffffff; /* white font */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.skills span:hover {
+  background: #ff77aa; /* matches command text on hover */
+  color: #ffffff;
+}
+
+/* ===== PROJECTS ===== */
+.project {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+.project h3 {
+  color: #a25cff;
+  margin-bottom: 30px;
+}
+
+.project-desc {
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #b0b6bb;
+}
+
+
+
+/* Carousel container */
+.project-carousel {
+  position: relative;
+  display: inline-block;  /* shrink-wrap around images */
+  margin: 10px auto;      /* center the whole carousel */
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+
+/* Slide wrapper */
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Each image */
+.carousel-slide img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 6px;
+}
+
+/* Carousel arrow buttons (no circle, only pink arrow) */
+.project-carousel .prev,
+.project-carousel .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;           /* remove background */
+  color: #ff77aa;            /* pink arrow color */
+  font-size: 2rem;           /* larger arrow */
+  padding: 0 8px;            /* just horizontal padding */
+  cursor: pointer;
+  border: none;              /* remove border */
+  user-select: none;
+}
+
+/* Hover effect for arrows */
+.project-carousel .prev:hover,
+.project-carousel .next:hover {
+  color: #ffc0d9;            /* lighter pink on hover */
+}
+
+/* Positioning arrows */
+.project-carousel .prev { left: 0; }
+.project-carousel .next { right: 0; }
+
+/* ===== PROFILE PICTURE ===== */
+.profile-pic {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #4da6ff; /* changed from green to pink */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+.profile-pic img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  transition: opacity 0.4s ease;
+}
+.profile-pic img.hover {
+  object-position: 50% 10%;
+  transform: scale(1.25);
+  opacity: 0;
+}
+.profile-pic:hover img.hover {
+  opacity: 1;
+}
+.profile-pic:hover img.default {
+  object-position: 50% 20%;
+  opacity: 0;
+}
+
+/* ===== CONTACT SECTION ===== */
+/* ===== CONTACT BUTTONS (Email & Resume) ===== */
+.contact-btn,
+.resume-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 8px 0;
+  background: rgba(204, 74, 143, 0.85);  /* slightly darker pink than #ff77aa */
+  border: 1px solid #ff77aa; /* border matches command text pink */
+  border-radius: 6px;
+  color: #ffffff; /* white font */
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.contact-btn:hover,
+.resume-btn:hover {
+  background: #ff77aa; /* command text pink */
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin: 10px 0 20px;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-form label {
+  color: #ff77aa; /* pink for form labels */
+  font-family: "Fira Code", monospace;
+}
+.contact-form input,
+.contact-form textarea {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px;
+  color: #e6edf3;
+  font-family: "Fira Code", monospace;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #ff77aa; /* pink focus */
+}
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff77aa; /* pink button */
+  color: #0d1117;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Fira Code", monospace;
+  transition: background 0.3s ease;
+}
+.contact-form button:hover {
+  background: #ffc0d9; /* hover pink */
+}
+
+/* ===== CONTACT INFO FONT SIZE ===== */
+.terminal-card:last-of-type .terminal-body p,
+.terminal-card:last-of-type .terminal-body a {
+  font-size: 0.8rem;   /* smaller text */
+}
+
+.terminal-card:last-of-type .command {
+  font-size: 0.8rem;    /* slightly smaller commands */
+}
+
+.terminal-card:last-of-type h2 {
+  font-size: 1.3rem;    /* keep "Let's Connect!" visible but not too big */
+}
+
+/* ===== SLIMMER CONTACT SECTION ===== */
+.terminal-card:last-of-type {
+  max-width: 500px;   /* adjust as needed (default was 800px) */
+}
+
+/* General social card */
+.social-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #e6edf3;
+  transition: background 0.3s ease;
+  width: 170px; /* same compact size as your screenshot */
+}
+
+.social-card:hover {
+  background: rgba(255, 119, 170, 0.15); /* faint pink glow */
+}
+
+/* Icon (left box) */
+.social-icon {
+  background: #ff77aa;  /* pink square */
+  color: #0d1117;       /* dark text for contrast */
+  font-weight: bold;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  border-radius: 4px;
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  min-height: 32px;
+}
+
+/* Text section */
+.social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.social-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.social-subtitle {
+  font-size: 0.6rem;
+  color: #c4ccd3;
+}
+
+/* ===== PROJECT TAGS ===== */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: #8a50b1de;        /* pink background */
+  border-radius: 50px;        /* makes it pill/circle style */
+  padding: 6px 14px;          /* horizontal padding */
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: #c4baba;             /* dark text for contrast */
+  font-family: "Inter", sans-serif;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-tags span:hover {
+  background: #e6c0ffcc;        /* lighter pink hover */
+  transform: translateY(-2px);
+}
+

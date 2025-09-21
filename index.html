@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariane Villanueva | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== COVER ===== -->
+  <section id="cover">
+    
+    <canvas id="cover-bg"></canvas>
+
+    <div id="intro" class="terminal-card">
+      <div class="terminal-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="terminal-body">
+        <p class="command">$ who_am_i</p>
+        <h1>Ariane Villanueva</h1>
+        <p class="subtitle">Aspiring Data Analyst</p>
+
+        <p class="command">$ skills</p>
+        <div class="skills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Excel</span>
+          <span>Data Analysis</span>
+          <span>Front-end Dev</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REST OF CONTENT ===== -->
+  <div id="site-content">
+    
+    <!-- About Me -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="terminal-body">
+        <p class="command">$ cat about_me.txt</p>
+
+        <!-- Profile Picture -->
+        <div class="profile-pic">
+          <img src="profile.jpg" alt="Ariane Villanueva" class="default">
+          <img src="profile-hover.jpg" alt="Ariane Villanueva Hover" class="hover">
+        </div>
+
+        <p>
+          Hi, I’m Ariane! <br><br>
+          I’m a fresh graduate with a degree in Computer Science from Tarlac State University. <br><br>
+          During my studies, I discovered how much I enjoy working with data, from cleaning and analyzing it 
+          to creating simple dashboards that tell a story. I have hands-on experience in Python, SQL, and Excel, 
+          and I’m continuously learning new tools to grow in this field. <br><br>
+          I see myself building a career in data analysis where I can apply what I’ve learned, contribute to 
+          meaningful projects, and keep improving as I go.
+        </p>
+      </div>
+    </div>
+
+    <!-- Technical & Soft Skills -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="terminal-body">
+        <p class="command">$ skills --all</p>
+        <h3>Technical Skills</h3>
+        <div class="skills">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Excel</span>
+          <span>PHP</span>
+          <span>Power BI</span>
+          <span>Java</span>
+          <span>Git</span>
+          <span>Front-end Dev</span>
+          <span>Data Visualization</span>
+          <span>Data Analysis</span>
+          <span>Machine Learning (Beginner)</span>
+        </div>
+        <h3>Soft Skills</h3>
+        <div class="skills">
+          <span>Problem Solving</span>
+          <span>Attention to Detail</span>
+          <span>Collaboration & Communication</span>
+          <span>Continuous Learning</span>
+          <span>Time Management</span>
+          <span>Strategic Planning</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="terminal-body">
+        <p class="command">$ ls ./projects</p>
+
+        <!-- Project 1 -->
+        <div class="project">
+          <h3>Sentiment Analysis for Market Trend Classification Focusing on TikTok Using Multinomial Naive Bayes</h3>
+          <div class="project-carousel">
+            <div class="carousel-slide">
+              <img src="project1-img1.png" alt="Project Image 1" class="carousel-image">
+              <img src="project1-img2.png" alt="Project Image 2" class="carousel-image">
+              <img src="project1-img3.png" alt="Project Image 3" class="carousel-image">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+          <p class="project-desc">A machine learning model developed to analyze TikTok comments in English, Tagalog, and Taglish. Sentiments were classified as positive, negative, or neutral to identify potential trends influencing consumer interest. Implemented using Multinomial Naive Bayes and VADER sentiment analysis, reaching an accuracy of 86.75%.</p>
+          
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>VADER</span>
+            <span>NLTK</span>
+            <span>MNB</span>
+            <span>pandas</span>
+            <span>Matplotlib</span>
+            <span>Seaborn</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <h3>Smart Sensing: Arduino for Blind Assistance</h3>
+          <div class="project-carousel">
+            <div class="carousel-slide">
+              <img src="project2-img1.png" alt="Project 2 Image 1" class="carousel-image">
+              <img src="project2-img2.png" alt="Project 2 Image 2" class="carousel-image">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+          </div>
+          <p class="project-desc">A prototype assistive device using ultrasonic sensors to detect obstacles within a 100 cm range. Feedback was delivered through buzzers and vibration motors, alerting users to nearby hazards. Focused on enhancing mobility and safety for visually impaired individuals by providing affordable, real-time obstacle detection.</p>
+        </div>
+
+    <!-- Project 3 -->
+    <div class="project">
+      <h3>Automatic Watering System For Urban Gardening</h3>
+      <div class="project-carousel">
+        <div class="carousel-slide">
+          <img src="project3-img1.png" alt="Project 3 Image 1" class="carousel-image">
+          <img src="project3-img2.png" alt="Project 3 Image 2" class="carousel-image">
+          <img src="project3-img3.png" alt="Project 3 Image 3" class="carousel-image">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <p class="project-desc">An Arduino-powered irrigation setup integrating soil moisture sensors, water pump, and real-time clock module. The system automates watering schedules and adjusts based on soil moisture levels, reducing water waste while improving efficiency for urban gardening. Designed as a low-cost and sustainable solution for plant care.</p>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project">
+      <h3>Student Information, Grades, & Schedule Database System</h3>
+      <div class="project-carousel">
+        <div class="carousel-slide">
+          <img src="project5-img1.png" alt="Project 4 Image 1" class="carousel-image">
+          <img src="project5-img2.png" alt="Project 4 Image 2" class="carousel-image">
+          <img src="project5-img3.png" alt="Project 4 Image 2" class="carousel-image">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <p class="project-desc">A Java Swing application developed to simplify fare computation for trips starting from Tarlac State University campuses to nearby towns. The system calculates passenger fares using distance-based logic, applying discounts for students, senior citizens, and persons with disabilities.</p>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project">
+      <h3>Fare Calculator for Terminal-based Public Transportation Systems</h3>
+      <div class="project-carousel">
+        <div class="carousel-slide">
+          <img src="project4-img1.png" alt="Project 4 Image 1" class="carousel-image">
+          <img src="project4-img2.png" alt="Project 4 Image 2" class="carousel-image">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+      <p class="project-desc">A Java Swing application developed to simplify fare computation for trips starting from Tarlac State University campuses to nearby towns. The system calculates passenger fares using distance-based logic, applying discounts for students, senior citizens, and persons with disabilities.</p>
+    </div>
+
+  </div>
+</div>
+
+    <!-- Contact Section -->
+    <div class="terminal-card">
+      <div class="terminal-header">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="terminal-body">
+        <p class="command">$ contact --info</p>
+        <h2>Let's Connect!</h2>
+
+        <p class="command">$ location --current</p>
+        <p>📍 Paniqui, Tarlac, Philippines</p>
+
+        <p class="command">$ contact --email</p>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=arianejvillanueva@gmail.com&su=Portfolio%20Inquiry&body=Hello%20Ariane," target="_blank" class="contact-btn">
+          arianejvillanueva@gmail.com
+        </a>
+
+        <p class="command">$ cat resume.pdf</p>
+        <a href="VILLANUEVA, ARIANE RESUME.pdf" download class="resume-btn">
+          📄 Download Resume
+        </a>
+
+        <p class="command">$ ls ./social-links</p>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/aryvillanueva" target="_blank" class="social-card linkedin">
+            <div class="social-icon">in</div>
+            <div class="social-text">
+              <span class="social-title">LinkedIn</span>
+              <span class="social-subtitle">Ariane Villanueva</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div> <!-- END site-content -->
+
+  <script src="script.js"></script>
+</body>
+</html>
