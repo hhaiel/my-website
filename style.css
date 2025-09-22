@@ -11,20 +11,21 @@ body {
 #cover {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;   /* ✅ stops disappearing content */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
+/* Force canvas to cover background properly on all screens */
 #cover-bg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
 }
 
 /* ===== TERMINAL CARD ===== */
@@ -373,3 +374,43 @@ body {
   transform: translateY(-2px);
 }
 
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+  .terminal-card {
+    width: 95%;   /* shrink cards slightly */
+    margin: 20px auto;
+  }
+
+  .terminal-body {
+    padding: 16px;
+    text-align: left; /* easier to read on mobile */
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .skills span {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .project-desc {
+    font-size: 0.8rem;
+  }
+
+  .contact-btn,
+  .resume-btn {
+    width: 100%;   /* full width buttons on mobile */
+    text-align: center;
+  }
+
+  .social-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -3,14 +3,14 @@ const canvas = document.getElementById("cover-bg");
 const ctx = canvas.getContext("2d");
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+-={}[]<>?/|";
-const fontSize = 12;
+const fontSize = 15;
 let columns, rows;
 let grid = [];
 
 // Initialize canvas and grid
 function initCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  canvas.width = document.documentElement.clientWidth;
+  canvas.height = document.documentElement.clientHeight;
   columns = Math.floor(canvas.width / fontSize);
   rows = Math.ceil(canvas.height / fontSize);
   initGrid();
@@ -48,7 +48,8 @@ function drawGrid() {
 }
 
 function updateGrid() {
-  const changes = Math.floor(columns * rows * 0.02);
+  // Update fewer characters for performance (helps mobile start instantly)
+  const changes = Math.floor(columns * rows * 0.01); // 1% instead of 2%
   for (let i = 0; i < changes; i++) {
     const x = Math.floor(Math.random() * columns);
     const y = Math.floor(Math.random() * rows);
@@ -62,10 +63,14 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Initialize canvas and animation
+// ✅ Start as soon as DOM is ready (not after images/fonts)
+document.addEventListener("DOMContentLoaded", () => {
+  initCanvas();
+  animate();
+});
+
+// ✅ Handle resize properly
 window.addEventListener("resize", initCanvas);
-initCanvas();
-animate();
 
 // ===== PROJECT CAROUSEL =====
 document.querySelectorAll('.project-carousel').forEach(carousel => {
